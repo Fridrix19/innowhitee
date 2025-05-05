@@ -59,3 +59,11 @@ document.addEventListener('keydown', e=>{
   window.addEventListener('load', () => {
     document.body.classList.remove('loading');
   });
+
+window.addEventListener('load', () => {
+  const video = document.getElementById('intro-video');
+  video.play().catch(e => {
+    console.log("Автозапуск не сработал:", e);
+  });
+});
+
